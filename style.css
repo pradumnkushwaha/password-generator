@@ -1,0 +1,99 @@
+*{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    background-color: aqua;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+.outer_box{
+    width: 300px;
+    height: 500px;
+   text-align: center;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+.Password_length{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    justify-content: flex-start;
+    justify-content: space-between;
+}
+.text1{
+    height: 20px;
+}
+.display{
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.copy{
+    height: 20px;
+}
+.pass_length{
+    height: 20px;
+}
+.number{
+    height: 20px;
+}
+.slider{
+    margin: 5px;
+    height: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.cases{
+   height: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.checkbox{
+   height: 20px;
+    display: flex;
+    justify-content: start;
+    padding: 15px;
+    
+}
+.check{
+    height: 20px;
+    margin-right: 10px;
+}
+.Strength{
+   
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+.circle_button{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 30px;
+}
+.pass_button{display: flex;
+    justify-content: center;
+    
+}
+
+
+img{
+    height: 15px;
+}
