@@ -12,26 +12,31 @@
         
         <div class="outer_box">
 <div  class="text1">Password Generator</div>
-<div class="display ">abcfd<button class="copy"><img src="/content_copy_FILL0_wght400_GRAD0_opsz24.png" alt=""></button></div>
+<div class="display ">
+    <div class="copy_text" id="copy_text">
+        <p id="copi1">abcfd</p>
+    </div>
+    <button class="copy" onclick="copy_clicked()"><img src="/content_copy_FILL0_wght400_GRAD0_opsz24.png" alt=""></button></div>
 <div class="Password_length">
     <div class ="pass_length">
         Password Length
     </div>
-    <div class="number">7</div>
+    <div class="number" id="num">7</div>
     
 </div>
-<input type="range" min="1" max="16" value="1" class="slider">
+<input type="range" min="1" max="16" value="5" class="slider" id="slide1" onchange="slides()">
 <div class="cases">
-   <div class="checkbox"> <input type="checkbox" class="check">dckmskdcm</div>
-   <div class="checkbox"> <input type="checkbox" class="check">dckmskdcm</div>
-   <div class="checkbox"> <input type="checkbox" class="check">dckmskdcm</div>
-   <div class="checkbox"> <input type="checkbox" class="check">dckmskdcm</div>
+   <div class="checkbox" > <input type="checkbox" class="check" id ="UPPERCASE" >UPPERCASE</div>
+   <div class="checkbox"> <input type="checkbox" class="check" id =" LOWERCASE">LOWERCASE</div>
+   <div class="checkbox"> <input type="checkbox" class="check" id =" NUMBERS">NUMBERS</div>
+   <div class="checkbox"> <input type="checkbox" class="check" id =" SPECIAL">SPECIAL CHARACTERS</div>
 
 
 </div>
 <div class="Strength">Strength  <button class="circle_button"></button></div>
-<div class="pass_button"> <button class="button">Generate Password</button></div>
+<div class="pass_button"> <button class="button" onclick="gpass()">Generate Password</button></div>
 </div>
 </div>
+<script src="/index.js"></script>
 </body>
 </html>
