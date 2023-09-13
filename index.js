@@ -1,54 +1,82 @@
 var copied =""
-
-console.log("ok");
+let flag = 0;
+// console.log("ok");
 function copy_clicked(){
-    console.log("okk");
-    copied = document.getElementById("copi1")
-    console.log(copied.innerHTML);
+    // console.log("okk");
+    const copied = document.getElementById("copi1")
+    console.log(copied.innerHTML+"copied to clicp");
+    
+    copied.addEventListener("copy", (event) => {
+        const selection = document.getSelection();
+        event.clipboardData.setData("text/plain", selection.toString().toUpperCase());
+        event.preventDefault();
+      });
      
 
 }
-console.log(copied+"ye hai")
+let slide =8 ;
+
+// console.log(copied+"ye hai")
 function slides(){
-    let slide= document.getElementById("slide1");
+    slide= document.getElementById("slide1").value;
     //slide.value= 2;
-    document.getElementById("num").innerHTML= slide.value;
-    console.log(slide.value)
+    document.getElementById("num").innerHTML= slide;
+    console.log(slide)
 }
 
+var lower = document.querySelector("#LOWERCASE");
+//console(lower.checked==true);
 
 function gpass(){
-    var char="";
-    if (document.getElementById("UPPERCASE") !== null) 
-    if( document.getElementById("UPPERCASE").checked==true)
-    {
+    const UPPERCASE = document.getElementById("UPPERCASE").checked;
+    const LOWERCASE = document.getElementById("LOWERCASE").checked;
+    const Numbers = document.getElementById("NUMBERS").checked;
+    const SPECIAL = document.getElementById("SPECIAL").checked;
+
+    console.log(slide);
+    let char="";
+    
+    
+    if( UPPERCASE)
+    { flag =1+flag;
      char = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"+char; 
     }
-    if (document.getElementById("LOWERCASE") !== null) 
-    console.log("lower");
-    if( document.getElementById("LOWERCASE").checked==true)
-    {console.log("lower");
+    
+    if(LOWERCASE )
+    { flag =1+flag;
         char = "abcdefghijklmnopqrstuvwxyz"+char; 
     }
-    if (document.getElementById("NUMBERS") !== null) 
-    if( document.getElementById("NUMBERS").checked==true)
-    {
+    
+    if( Numbers)
+    {flag =1+flag;
+        
      char = "1234567890"+char; 
     }
-    if (document.getElementById("SPECIAL") !== null) 
-    if( document.getElementById("SPECIAL").checked==true)
-    {
+    
+    if( SPECIAL)
+    {flag =1+flag;
      char = "!@#$%^&*()_-"+char; 
     }
-     console.log(char);
+    // console.log(char);
     var pass="";
-    let ok;
+    let num;
     
     //console.log(char.charAt(ok));
-    for (let i = 0;i <8;i++)
+    for (let i = 0;i <slide;i++)
     {
-        ok = Math.floor((Math.random()*26)+1);
-        pass= char.charAt(ok)+pass
+    if(char.length==0)
+        char="1A@aPc*9"
+        num = Math.floor((Math.random()*char.length));
+        
+        pass= char.charAt(num)+pass
+        console.log(num);
         console.log(pass);
+        document.getElementById("copi1").innerHTML=pass
+    }
+    console.log(flag+"..........")
+    if(flag==4){
+        console.log(flag+".!!!!!.")
+      let circle_button=  document.getElementById("circle_button");
+      circle_button.style.backgroundColor= "green";
     }
 }
